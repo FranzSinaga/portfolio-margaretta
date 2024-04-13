@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { Layout } from "@/components/Layout";
-import { MicroBlog1, MicroBlog2, MicroBlog3 } from "./_components";
+import { MicroBlog1, MicroBlog2, MicroBlog3 } from "@/components/socials";
 
 import type { HeadFC, PageProps } from "gatsby";
 
