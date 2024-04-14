@@ -8,7 +8,7 @@ const Education: React.FC<PageProps> = () => {
   return (
     <Layout>
       <div className="flex justify-center content-center items-center gap-x-7">
-        <div className="w-[600px] pb-5">
+        <div className="w-[400px] pb-5">
           <Lottie animationData={animation} loop={true} />
         </div>
         <div className="pb-5">
@@ -37,7 +37,7 @@ const Education: React.FC<PageProps> = () => {
           </ol>
         </div>
       </div>
-      <div className="mx-20 mt-16">
+      <div className="mx-20 mt-10">
         <h3 className="text-2xl font-semibold">Kegiatan Perkuliahan</h3>
         <div className="my-8 flex justify-around gap-x-3">
           <div className="w-56 h-56 bg-gray-400"></div>
