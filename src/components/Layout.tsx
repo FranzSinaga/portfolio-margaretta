@@ -1,6 +1,7 @@
 import React, { PropsWithChildren } from "react";
 import { Header } from "./Header";
-import { ScreenIndicator } from "./ScreenIndicator";
+// import { ScreenIndicator } from "./ScreenIndicator";
+import { Fade } from "react-awesome-reveal";
 
 export const Layout = ({
   childrenClassName,
@@ -11,9 +12,9 @@ export const Layout = ({
       <div className="h-[calc(100vh-50px)] bg-white shadow-sm rounded-xl overflow-auto scroll-container">
         <Header />
         <div className={`px-32 rounded-lg ${childrenClassName}`}>
-          {children}
+          <Fade>{children}</Fade>
         </div>
-        {process.env.env !== "production" && <ScreenIndicator />}
+        {/* {process.env.env !== "production" && <ScreenIndicator />} */}
       </div>
     </div>
   );
