@@ -22,12 +22,16 @@ const Projects: React.FC<PageProps> = () => {
                 <div>
                   <p className="font-bold text-xl">{e.title}</p>
                   <p className="font-normal text-sm">
-                    {e.types} | {e.periode}
+                    {e.types}
+                    <br />
+                    <span className="italic text-xs">{e.periode}</span>
                   </p>
                 </div>
               </div>
-              <div className="px-4 pb-4 mt-2">
-                <p className="font-normal text-base">{e.description}</p>
+              <div className="px-4 pb-4 mt-5">
+                <p className="font-normal text-base text-justify">
+                  {e.description}
+                </p>
 
                 {e.links.length > 0 && (
                   <div className="flex flex-col mt-5">
