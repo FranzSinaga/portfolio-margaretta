@@ -20,8 +20,11 @@ const Projects: React.FC<PageProps> = () => {
                   className="h-20 bg-cover object-cover border rounded-lg"
                 />
                 <p className="font-bold text-xl mt-2">{e.title}</p>
+                <p className="font-normal text-sm">
+                  {e.types} | {e.periode}
+                </p>
               </div>
-              <div className="px-4 pb-4">
+              <div className="px-4 pb-4 mt-2">
                 <p className="font-normal text-base">{e.description}</p>
 
                 {e.links.length > 0 && (

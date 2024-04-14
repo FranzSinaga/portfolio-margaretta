@@ -2,6 +2,7 @@ import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import { Layout } from "@/components/Layout";
 import we from "./work-experience.json";
+import { Building2 } from "lucide-react";
 
 const WorkExperience: React.FC<PageProps> = () => {
   const data = we;
@@ -11,7 +12,20 @@ const WorkExperience: React.FC<PageProps> = () => {
       <div className="space-y-5 m-5 flex flex-col justify-center align-middle items-center">
         {data.map((e, key) => (
           <div key={key} className="grid grid-cols-3 gap-x-10">
-            <div className="col-span-1 w-32 h-32 bg-gray-400 justify-self-end"></div>
+            {e.imageUrl ? (
+              <div className="col-span-1 justify-self-end">
+                <img
+                  src={e.imageUrl}
+                  alt={e.imageUrl}
+                  className="w-40 rounded-md"
+                />
+              </div>
+            ) : (
+              <div className="col-span-1 w-28 h-28 flex justify-center items-center rounded-md bg-gray-400 justify-self-end">
+                <Building2 className="text-black" size={50} />
+              </div>
+            )}
+
             <div className="col-span-2">
               <p className="font-semibold text-xl">
                 {e.name} | {e.place} |{" "}
