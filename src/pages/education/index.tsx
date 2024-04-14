@@ -2,7 +2,7 @@ import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import { Layout } from "@/components/Layout";
 import Lottie from "lottie-react";
-import animation from "../../assets/Homepage.json";
+import animation from "../../assets/Education.json";
 
 const Education: React.FC<PageProps> = () => {
   return (

@@ -11,7 +11,7 @@ const navigation: NavigationListType = [
   { name: "Education", href: "/education" },
   { name: "Work Experience", href: "/work-experience" },
   { name: "Projects", href: "/projects" },
-  { name: "Social Media", href: "/contacts" },
+  { name: "Social Media", href: "/socials" },
 ];
 
 export const Header = () => {
@@ -23,7 +23,7 @@ export const Header = () => {
         className="sticky mx-auto flex max-w-7xl items-center justify-center p-6 lg:px-8"
         aria-label="Global"
       >
-        <div className="flex gap-x-12 p-2 shadow-md rounded-full">
+        <div className="flex gap-x-5 p-2 shadow-md rounded-full">
           {navigation.map((item) => (
             <a
               key={item.name}

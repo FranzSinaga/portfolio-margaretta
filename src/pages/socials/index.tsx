@@ -16,8 +16,8 @@ import { Linkedin, Mail, MoveRight } from "lucide-react";
 const Contacts: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <p className="text-2xl font-semibold mx-20 mt-16 mb-5">Youtube</p>
-      <div className="grid grid-cols-4 gap-5 mx-20  mb-10">
+      <p className="text-2xl font-semibold mt-16 mb-5">Youtube</p>
+      <div className="grid grid-cols-4 gap-5  mb-10">
         <div>
           <iframe
             width="100%"
@@ -64,8 +64,8 @@ const Contacts: React.FC<PageProps> = () => {
         </div>
       </div>
 
-      <p className="text-2xl font-semibold mx-20 mt-16 mb-5">Instagram</p>
-      <div className="grid grid-cols-4 gap-5 mx-20  mb-10">
+      <p className="text-2xl font-semibold  mt-16 mb-5">Instagram</p>
+      <div className="grid grid-cols-4 gap-5 mb-10">
         <MicroBlog1 />
         <MicroBlog2 />
         <MicroBlog3 />
@@ -89,8 +89,8 @@ const Contacts: React.FC<PageProps> = () => {
           </div>
         </div>
       </div>
-      <p className="text-2xl font-semibold mx-20 mt-16 mb-5">Others</p>
-      <div className="flex gap-x-3 mx-20 mb-10">
+      <p className="text-2xl font-semibold  mt-16 mb-5">Others</p>
+      <div className="flex gap-x-3 mb-10">
         <div className="w-20 h-20 bg-black flex items-center justify-center rounded-lg">
           <Linkedin size={50} className="text-white" />
         </div>

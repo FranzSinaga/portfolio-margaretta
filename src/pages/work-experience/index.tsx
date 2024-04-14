@@ -1,41 +1,29 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import { Layout } from "@/components/Layout";
+import we from "./work-experience.json";
 
 const WorkExperience: React.FC<PageProps> = () => {
+  const data = we;
+
   return (
     <Layout>
-      <div className="space-y-5 mb-5 mt-10 flex flex-col justify-center align-middle items-center">
-        {[...Array(5)].map((e) => (
-          <div className="flex gap-x-10">
-            <div className="w-32 h-32 bg-gray-400"></div>
-            <div>
-              <p className="font-semibold text-xl border-b-2">
-                PT. Adira Dinamika Multi Finance | South Jakarta |{" "}
-                <span className="font-normal italic">Technical Writer</span>
+      <div className="space-y-5 m-5 flex flex-col justify-center align-middle items-center">
+        {data.map((e, key) => (
+          <div key={key} className="grid grid-cols-3 gap-x-10">
+            <div className="col-span-1 w-32 h-32 bg-gray-400 justify-self-end"></div>
+            <div className="col-span-2">
+              <p className="font-semibold text-xl">
+                {e.name} | {e.place} |{" "}
+                <span className="font-normal italic">{e.position}</span>
               </p>
-              <p>March 2021 - Now</p>
+              <p>{e.periode}</p>
               <ol className="mt-3">
-                <li className="list-disc ms-10">
-                  Determine the needs of users who will receive technical
-                  documentation
-                </li>
-                <li className="list-disc ms-10">
-                  Study product examples and talk further with their creators
-                  and developers
-                </li>
-                <li className="list-disc ms-10">
-                  Write product documents using photos, images, and diagrams
-                  that enhance user understanding
-                </li>
-                <li className="list-disc ms-10">
-                  Revise documents when there are product updates
-                </li>
-                <li className="list-disc ms-10">
-                  Writing supporting documents for products, namely BRD,
-                  Technical Documents, Artifact Documents, API documents, and
-                  User Manuals
-                </li>
+                {e.responsibilities.map((e, key) => (
+                  <li key={key} className="list-disc ms-10">
+                    {e}
+                  </li>
+                ))}
               </ol>
             </div>
           </div>
