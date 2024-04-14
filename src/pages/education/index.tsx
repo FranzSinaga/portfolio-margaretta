@@ -18,8 +18,12 @@ const Education: React.FC<PageProps> = () => {
               <time className="mb-1 text-sm font-normal leading-none text-gray-900 ">
                 2013 - 2016
               </time>
-              <h3 className="text-lg font-semibold text-gray-900 d">SMA</h3>
-              <p className="text-base font-normal text-gray-500 ">Science</p>
+              <h3 className="text-lg font-semibold text-gray-900 d">
+                Senior High School
+              </h3>
+              <p className="text-base font-normal text-gray-500 ">
+                Science Major
+              </p>
             </li>
             <li className="ms-5">
               <div className="absolute w-3 h-3 bg-purple-700 rounded-full mt-1.5 -start-1.5 border border-purple-900"></div>
@@ -37,7 +41,7 @@ const Education: React.FC<PageProps> = () => {
           </ol>
         </div>
       </div>
-      <div className="mx-20 mt-10">
+      {/* <div className="mx-20 mt-10">
         <h3 className="text-2xl font-semibold">Kegiatan Perkuliahan</h3>
         <div className="my-8 flex justify-around gap-x-3">
           <div className="w-56 h-56 bg-gray-400"></div>
@@ -51,7 +55,7 @@ const Education: React.FC<PageProps> = () => {
           <div className="w-56 h-56 bg-gray-400"></div>
           <div className="w-56 h-56 bg-gray-400"></div>
         </div>
-      </div>
+      </div> */}
     </Layout>
   );
 };

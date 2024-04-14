@@ -96,16 +96,34 @@ const Contacts: React.FC<PageProps> = () => {
       <p className="text-2xl font-semibold  mt-10 mb-5">Others</p>
       <div className="flex gap-x-3 mb-10">
         <div className="w-20 h-20 bg-black flex items-center justify-center rounded-lg">
-          <Linkedin size={50} className="text-white" />
+          <a
+            href="https://www.linkedin.com/in/margaretta-r-v-simanjuntak-18261115b/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Linkedin size={50} className="text-white" />
+          </a>
         </div>
         <div className="w-20 h-20 bg-black flex items-center justify-center rounded-lg">
-          <Mail size={50} className="text-white" />
+          <a
+            href="mailto:margaretharuth5@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Mail size={50} className="text-white" />
+          </a>
         </div>
-        <StaticImage
-          src="../../images/medium.png"
-          alt="medium"
-          className="w-20 rounded-lg"
-        />
+        <a
+          href="https://medium.com/@margaretharuth5"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <StaticImage
+            src="../../images/medium.png"
+            alt="medium"
+            className="w-20 rounded-lg"
+          />
+        </a>
       </div>
     </Layout>
   );

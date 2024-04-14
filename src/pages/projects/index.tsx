@@ -10,19 +10,21 @@ const Projects: React.FC<PageProps> = () => {
     <Layout>
       <div className="space-y-5 mb-5 mt-10">
         <h1 className="text-4xl font-bold">Projects</h1>
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid grid-cols-3 gap-5">
           {pj.map((e, key) => (
             <div key={key} className="w-full border rounded-lg hover:shadow-md">
-              <div className=" px-4 pt-4 rounded-t-lg ">
+              <div className="flex gap-x-5 items-center px-4 pt-4 rounded-t-lg ">
                 <img
                   src={e.imageUrl}
                   alt={e.imageUrl}
-                  className="h-20 bg-cover object-cover border rounded-lg"
+                  className="h-14 bg-cover object-cover border rounded-lg"
                 />
-                <p className="font-bold text-xl mt-2">{e.title}</p>
-                <p className="font-normal text-sm">
-                  {e.types} | {e.periode}
-                </p>
+                <div>
+                  <p className="font-bold text-xl">{e.title}</p>
+                  <p className="font-normal text-sm">
+                    {e.types} | {e.periode}
+                  </p>
+                </div>
               </div>
               <div className="px-4 pb-4 mt-2">
                 <p className="font-normal text-base">{e.description}</p>

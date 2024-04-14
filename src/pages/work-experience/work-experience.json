@@ -1,18 +1,33 @@
 [
   {
     "name": "PT. Adira Dinamika Multi Finance",
+    "position": "Quality Control",
+    "imageUrl": "https://bucket.sdmdigital.id/dts-simonas/simonas/logo/gambar_208.JPG",
+    "place": "South Jakarta",
+    "periode": "May 2023 - Now",
+    "responsibilities": [
+      "Develop positive and negative test scenarios based on specifications documented in the Business Requirements Document (BRD).",
+      "Execute test scenarios and document findings in Bug Reports.",
+      "Identify defects or incompatibilities between the product being developed and the specified user needs.",
+      "Track and manage bug issues using management systems such as SharePoint and Jira.",
+      "Communicate and collaborate with the development team to resolve findings and find appropriate solutions.",
+      "Perform API testing using tools such as Swagger and Postman to ensure compliance with existing specifications.",
+      "Prepare a release document (Quality Control Release) to state the readiness of the source code to be applied to UAT and Production environments."
+    ]
+  },
+  {
+    "name": "PT. Adira Dinamika Multi Finance",
     "position": "Technical Writer",
     "imageUrl": "https://bucket.sdmdigital.id/dts-simonas/simonas/logo/gambar_208.JPG",
     "place": "South Jakarta",
-    "periode": "March 2021 - Now",
+    "periode": "March 2021 - May 2023",
     "responsibilities": [
-      "Determine the needs of users who will receive technical documentation",
-      "Study product examples and talk further with their creators and developers",
-      "Write product documents using photos, images, and diagrams that enhance user understanding",
-      "Revise documents when there are product updates",
-      "Writing supporting documents for products, namely BRD, Technical Documents, Artifact Documents, API documents, and User Manuals",
-      "Perform application testing (manual) and API testing using Swagger",
-      "Create training materials for each portfolio owned by the company"
+      "Determined the needs of users who would receive the technical documentation.",
+      "Explored the use of application products and discussed further with stakeholders.",
+      "Completed product documents using photos, images, and diagrams that enhanced user understanding (did some revision if updated products were needed).",
+      "Generated supporting documents for the products, namely Bank Scenario, Technical Specification Documents, Artifact Documents, Application Programming Interface (API) documents, Data Dictionary, and User Manuals.",
+      "Performed application testing (manual) and API testing using Swagger/Postman.",
+      "Created training materials for each portfolio owned by the company."
     ]
   },
   {
