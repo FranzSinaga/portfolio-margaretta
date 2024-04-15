@@ -11,22 +11,25 @@ const WorkExperience: React.FC<PageProps> = () => {
     <Layout>
       <div className="space-y-5 m-5 flex flex-col justify-center align-middle items-center">
         {data.map((e, key) => (
-          <div key={key} className="grid grid-cols-3 gap-x-10">
+          <div
+            key={key}
+            className="flex flex-col gap-y-2 md:grid md:grid-cols-4 gap-x-10"
+          >
             {e.imageUrl ? (
-              <div className="col-span-1 justify-self-end">
+              <div className="md:col-span-1 md:justify-self-end">
                 <img
                   src={e.imageUrl}
                   alt={e.imageUrl}
-                  className="w-40 rounded-md"
+                  className="h-20 rounded-md"
                 />
               </div>
             ) : (
-              <div className="col-span-1 w-28 h-28 flex justify-center items-center rounded-md bg-gray-400 justify-self-end">
+              <div className="md:col-span-1 w-20 h-20 flex justify-center items-center rounded-md bg-gray-400 md:justify-self-end">
                 <Building2 className="text-black" size={50} />
               </div>
             )}
 
-            <div className="col-span-2">
+            <div className="md:col-span-3">
               <p className="font-semibold text-xl">
                 {e.name} | {e.place} |{" "}
                 <span className="font-normal italic">{e.position}</span>
@@ -34,7 +37,7 @@ const WorkExperience: React.FC<PageProps> = () => {
               <p>{e.periode}</p>
               <ol className="mt-3">
                 {e.responsibilities.map((e, key) => (
-                  <li key={key} className="list-disc ms-10">
+                  <li key={key} className="list-disc ms-10 text-justify mr-10">
                     {e}
                   </li>
                 ))}

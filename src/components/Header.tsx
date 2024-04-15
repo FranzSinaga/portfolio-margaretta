@@ -18,7 +18,7 @@ export const Header = () => {
   return (
     <header className="py-2">
       <nav
-        className="sticky mx-auto flex max-w-7xl px-4 items-center justify-center p-6 lg:px-8"
+        className="mx-auto flex max-w-7xl px-4 items-center justify-center p-6 lg:px-8"
         aria-label="Global"
       >
         <div className="flex gap-x-5 p-2 px-7 shadow-md rounded-full">

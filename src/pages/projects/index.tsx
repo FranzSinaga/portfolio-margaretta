@@ -10,14 +10,14 @@ const Projects: React.FC<PageProps> = () => {
     <Layout>
       <div className="space-y-5 mb-5 mt-10">
         <h1 className="text-4xl font-bold">Projects</h1>
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {pj.map((e, key) => (
             <div key={key} className="w-full border rounded-lg hover:shadow-md">
-              <div className="flex gap-x-5 items-center px-4 pt-4 rounded-t-lg ">
+              <div className="lg:flex lg:flex-row gap-x-5 lg:items-center px-4 pt-4 rounded-t-lg ">
                 <img
                   src={e.imageUrl}
                   alt={e.imageUrl}
-                  className="h-14 bg-cover object-cover border rounded-lg"
+                  className="h-14 w-auto bg-cover object-cover border rounded-lg"
                 />
                 <div>
                   <p className="font-bold text-xl">{e.title}</p>
