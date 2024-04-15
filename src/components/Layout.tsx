@@ -20,13 +20,13 @@ export const Layout = ({
     <div
       className={twMerge(
         "p-5 bg-gradient-to-bl from-pink-500 to-yellow-500",
-        windowHeight && windowHeight > 500 && "md:h-[100vh]"
+        windowHeight && windowHeight > 500 && "h-[100vh]"
       )}
     >
       <div
         className={twMerge(
           "bg-white shadow-sm rounded-xl",
-          windowHeight && windowHeight > 500 && "md:h-[calc(100vh-40px)]"
+          windowHeight && windowHeight > 500 && "h-[calc(100vh-40px)]"
         )}
       >
         <Header />
@@ -34,7 +34,7 @@ export const Layout = ({
           className={twMerge(
             `rounded-lg ${childrenClassName} overflow-auto scroll-container`,
             windowHeight && windowHeight > 500
-              ? "md:h-[calc(100%-130px)] px-5 lg:px-28"
+              ? "h-[calc(100%-130px)] px-5 lg:px-28"
               : "h-full px-5 lg:px-28"
           )}
         >

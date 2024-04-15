@@ -78,7 +78,7 @@ const Contacts: React.FC<PageProps> = () => {
 
       <div>
         <p className="text-2xl font-semibold  mt-10 mb-5">Instagram</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
           <MicroBlog1 />
           <MicroBlog2 />
           <MicroBlog3 />
