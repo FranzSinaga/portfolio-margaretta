@@ -1,31 +1,42 @@
 import * as React from "react";
-import type { HeadFC, PageProps } from "gatsby";
 import Lottie from "lottie-react";
-import animation from "../assets/Homepage.json";
+
 import { Layout } from "@/components/Layout";
+
+import type { HeadFC, PageProps } from "gatsby";
+import animation from "../assets/Homepage.json";
 
 const Homepage: React.FC<PageProps> = () => {
   return (
     <Layout childrenClassName="flex justify-center items-center">
       <div>
-        <p className="text-purple-700 font-bold text-lg lg:text-xl xl:text-2xl ">
+        <p className="text-lg font-bold text-purple-700 lg:text-xl xl:text-2xl ">
           Hi, My Name is
         </p>
-        <p className="font-extrabold text-xl lg:text-2xl xl:text-4xl leading-tight">
+        <p className="text-xl font-extrabold leading-tight lg:text-2xl xl:text-4xl">
           <p>
             Margaretta Ruth
             <br />
             Verawati Simanjuntak
           </p>
         </p>
-        <p className="font-normal text-sm lg:text-base xl:text-xl mt-5">
+        <p className="mt-5 text-sm font-normal lg:text-base xl:text-xl">
           Technical Writer, Quality Assurance and Quality Control
         </p>
-        <button className="py-2 px-6 mt-5 bg-purple-700 text-white text-center font-bold whitespace-nowrap text-base lg:text-lg xl:text-xl rounded-full hover:bg-purple-800">
-          Get To Know Me 👋
+        <button
+          type="button"
+          className="mt-5 whitespace-nowrap rounded-full bg-purple-700 px-6 py-2 text-center text-base font-bold text-white hover:bg-purple-800 lg:text-lg xl:text-xl"
+        >
+          <a
+            href="mailto:margaretharuth5@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Get To Know Me 👋
+          </a>
         </button>
       </div>
-      <div className="w-[300px] lg:w-[470px] xl:w-[490px] hidden md:block pb-5">
+      <div className="hidden w-[300px] pb-5 md:block lg:w-[470px] xl:w-[490px]">
         <Lottie animationData={animation} loop={true} />
       </div>
     </Layout>

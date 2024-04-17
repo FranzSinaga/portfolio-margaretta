@@ -1,20 +1,22 @@
 import * as React from "react";
-import type { HeadFC, PageProps } from "gatsby";
-import { Layout } from "@/components/Layout";
 import Lottie from "lottie-react";
+
+import { Layout } from "@/components/Layout";
 import animation from "../../assets/Education.json";
+
+import type { HeadFC, PageProps } from "gatsby";
 
 const Education: React.FC<PageProps> = () => {
   return (
     <Layout childrenClassName="flex md:gap-x-10 justify-center items-center">
-      <div className="w-[300px] lg:w-[470px] xl:w-[490px] hidden md:block pb-5">
+      <div className="hidden w-[300px] pb-5 md:block lg:w-[470px] xl:w-[490px]">
         <Lottie animationData={animation} loop={true} />
       </div>
       <div className="pb-5">
-        <ol className="relative ml-1 border-s-2 border-gray-400 space-y-5">
+        <ol className="relative ml-1 space-y-5 border-s-2 border-gray-400">
           <li className="ms-5">
-            <div className="absolute w-3 h-3 bg-purple-700 rounded-full mt-1.5 -start-1.5 border border-purple-900"></div>
-            <time className="mb-1 italic text-sm font-normal leading-none text-gray-900 ">
+            <div className="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-purple-900 bg-purple-700"></div>
+            <time className="mb-1 text-sm font-normal italic leading-none text-gray-900 ">
               September 2016 - September 2020
             </time>
             <h3 className="text-lg font-semibold text-gray-900 ">
@@ -26,12 +28,12 @@ const Education: React.FC<PageProps> = () => {
             </p>
           </li>
           <li className="ms-5">
-            <div className="absolute w-3 h-3 bg-purple-700 rounded-full mt-1.5 -start-1.5 border border-purple-900"></div>
-            <time className="mb-1 italic text-sm font-normal leading-none text-gray-900 ">
+            <div className="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-purple-900 bg-purple-700"></div>
+            <time className="mb-1 text-sm font-normal italic leading-none text-gray-900 ">
               2013 - 2016
             </time>
-            <h3 className="text-lg font-semibold text-gray-900 d">
-              Senior High School
+            <h3 className="d text-lg font-semibold text-gray-900">
+              SMA Negeri 1 Balige
             </h3>
             <p className="text-base font-normal text-gray-500 ">
               Science Major

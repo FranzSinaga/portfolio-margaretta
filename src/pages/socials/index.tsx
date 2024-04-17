@@ -5,11 +5,6 @@ import { MicroBlog1, MicroBlog2, MicroBlog3 } from "@/components/socials";
 
 import type { HeadFC, PageProps } from "gatsby";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 import { StaticImage } from "gatsby-plugin-image";
 import { Linkedin, Mail, MoveRight } from "lucide-react";
 
@@ -17,8 +12,8 @@ const Contacts: React.FC<PageProps> = () => {
   return (
     <Layout>
       <div>
-        <p className="text-2xl font-semibold mb-5">Youtube</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+        <p className="mb-5 text-2xl font-semibold">Youtube</p>
+        <div className="mb-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <iframe
               width="100%"
@@ -55,11 +50,11 @@ const Contacts: React.FC<PageProps> = () => {
               allowFullScreen
             ></iframe>
           </div>
-          <div className="hidden md:flex justify-center items-center h-[280] bg-gray-200 border-dashed border-2 border-gray-600 rounded-lg">
+          <div className="hidden h-[280] items-center justify-center rounded-lg border-2 border-dashed border-gray-600 bg-gray-200 md:flex">
             <a
               href="https://www.youtube.com/@margarettaruth6004"
               target="_blank"
-              className="flex gap-x-4 p-2 px-12 bg-purple-700 hover:bg-purple-800 rounded-full border-white  border-2 text-white font-semibold"
+              className="flex gap-x-4 rounded-full border-2 border-white bg-purple-700 p-2 px-12  font-semibold text-white hover:bg-purple-800"
               rel="noreferrer"
             >
               See More <MoveRight />
@@ -68,7 +63,7 @@ const Contacts: React.FC<PageProps> = () => {
           <a
             href="https://www.youtube.com/@margarettaruth6004"
             target="_blank"
-            className="md:hidden flex gap-x-4 p-2 px-12 bg-purple-700 hover:bg-purple-800 rounded-full border-white  border-2 text-white font-semibold"
+            className="flex gap-x-4 rounded-full border-2 border-white bg-purple-700 p-2 px-12 font-semibold  text-white hover:bg-purple-800 md:hidden"
             rel="noreferrer"
           >
             See More <MoveRight />
@@ -77,8 +72,8 @@ const Contacts: React.FC<PageProps> = () => {
       </div>
 
       <div>
-        <p className="text-2xl font-semibold  mt-10 mb-5">Instagram</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+        <p className="mb-5 mt-10  text-2xl font-semibold">Instagram</p>
+        <div className="mb-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
           <MicroBlog1 />
           <MicroBlog2 />
           <MicroBlog3 />
@@ -90,13 +85,13 @@ const Contacts: React.FC<PageProps> = () => {
               className="rounded-lg blur-sm"
             ></StaticImage>
             <div
-              className="absolute justify-center items-center top-[50%] left-[50%] "
+              className="absolute left-[50%] top-[50%] items-center justify-center "
               style={{ transform: "translate(-50%, -50%)" }}
             >
               <a
                 href="https://www.instagram.com/etha040321/"
                 target="_blank"
-                className="flex gap-x-4 whitespace-nowrap p-2 px-12 text-sm bg-purple-700 hover:bg-purple-800 rounded-full border-white  border-2 text-white font-semibold"
+                className="flex gap-x-4 whitespace-nowrap rounded-full border-2 border-white bg-purple-700 p-2 px-12 text-sm  font-semibold text-white hover:bg-purple-800"
                 rel="noreferrer"
               >
                 See More <MoveRight />
@@ -104,9 +99,9 @@ const Contacts: React.FC<PageProps> = () => {
             </div>
           </div>
         </div>
-        <p className="text-2xl font-semibold  mt-10 mb-5">Others</p>
-        <div className="flex gap-x-3 mb-10">
-          <div className="w-20 h-20 bg-black flex items-center justify-center rounded-lg">
+        <p className="mb-5 mt-10  text-2xl font-semibold">Others</p>
+        <div className="mb-10 flex gap-x-3">
+          <div className="flex h-20 w-20 items-center justify-center rounded-lg bg-black">
             <a
               href="https://www.linkedin.com/in/margaretta-r-v-simanjuntak-18261115b/"
               target="_blank"
@@ -115,7 +110,7 @@ const Contacts: React.FC<PageProps> = () => {
               <Linkedin size={50} className="text-white" />
             </a>
           </div>
-          <div className="w-20 h-20 bg-black flex items-center justify-center rounded-lg">
+          <div className="flex h-20 w-20 items-center justify-center rounded-lg bg-black">
             <a
               href="mailto:margaretharuth5@gmail.com"
               target="_blank"

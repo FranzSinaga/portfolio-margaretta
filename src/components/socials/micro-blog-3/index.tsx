@@ -6,6 +6,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { ImgTypes } from "../types";
 
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+
 import "../style.css";
 
 // interface Props {

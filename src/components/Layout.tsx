@@ -1,9 +1,11 @@
 import React, { PropsWithChildren } from "react";
-import { Header } from "./Header";
-import { ScreenIndicator } from "./ScreenIndicator";
 import { Fade } from "react-awesome-reveal";
 import { useWindowSize } from "@uidotdev/usehooks";
-import { twMerge } from "tailwind-merge";
+
+import { Header } from "./Header";
+import { ScreenIndicator } from "./ScreenIndicator";
+
+import { cn } from "@/lib/utils";
 
 interface Props {
   childrenClassName?: string;
@@ -18,24 +20,24 @@ export const Layout = ({
 
   return (
     <div
-      className={twMerge(
-        "p-5 bg-gradient-to-bl from-pink-500 to-yellow-500",
-        windowHeight && windowHeight > 500 && "h-[100vh]"
+      className={cn(
+        "bg-gradient-to-bl from-pink-500 to-yellow-500 p-5",
+        windowHeight && windowHeight > 500 && "h-[100vh]",
       )}
     >
       <div
-        className={twMerge(
-          "bg-white shadow-sm rounded-xl",
-          windowHeight && windowHeight > 500 && "h-[calc(100vh-40px)]"
+        className={cn(
+          "rounded-xl bg-white shadow-sm",
+          windowHeight && windowHeight > 500 && "h-[calc(100vh-40px)]",
         )}
       >
         <Header />
         <div
-          className={twMerge(
-            `rounded-lg ${childrenClassName} overflow-auto scroll-container`,
+          className={cn(
+            `rounded-lg ${childrenClassName} scroll-container overflow-auto`,
             windowHeight && windowHeight > 500
               ? "h-[calc(100%-130px)] px-5 lg:px-28"
-              : "h-full px-5 lg:px-28"
+              : "h-full px-5 lg:px-28",
           )}
         >
           <Fade>{children}</Fade>
