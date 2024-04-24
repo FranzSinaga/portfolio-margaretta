@@ -1,6 +1,7 @@
 import React, { PropsWithChildren } from "react";
 import { Fade } from "react-awesome-reveal";
 import { useWindowSize } from "@uidotdev/usehooks";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import { Header } from "./Header";
 import { ScreenIndicator } from "./ScreenIndicator";
@@ -42,6 +43,7 @@ export const Layout = ({
         >
           <Fade>{children}</Fade>
         </div>
+        <SpeedInsights />
         {process.env.NODE_ENV !== "production" && <ScreenIndicator />}
       </div>
     </div>
