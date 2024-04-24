@@ -30,6 +30,7 @@
     "gatsby-plugin-offline": "^6.13.2",
     "gatsby-plugin-postcss": "^6.13.1",
     "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-plugin-umami": "^0.1.5",
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "lottie-react": "^2.4.0",

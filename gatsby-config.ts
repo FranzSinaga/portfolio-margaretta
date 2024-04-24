@@ -3,7 +3,7 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Margaretta Portfolio's`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://portfolio-margaretta.vercel.app`,
     description:
       "Experience the quality and precision of a seasoned Technical Writer and Quality Assurance specialist. Explore the portfolio where meticulous writing meets rigorous quality control, showcasing a commitment to excellence and attention to detail in every project.",
   },
@@ -35,6 +35,14 @@ const config: GatsbyConfig = {
         theme_color: `#483285`,
         display: `standalone`,
         icon: `src/images/logo_etha.png`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-umami`,
+      options: {
+        websiteId: "f00269c0-83d3-4e16-aa3a-28ab2b4dfffa",
+        srcUrl: "https://web-analytics-umami.vercel.app/script.js",
+        includeInDevelopment: false,
       },
     },
   ],
