@@ -6,11 +6,11 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import tailwind from "./globals.css";
+import appStylesHref from "./globals.css?url";
 import { ScreenIndicator } from "./components/ScreenIndicator";
 
 export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: tailwind },
+  { rel: "stylesheet", href: appStylesHref },
 ];
 
 const menu = [
@@ -51,7 +51,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 ))}
               </ul>
             </nav>
-            <div className="overflow-auto h-[calc(100%-50px)] rounded">{children}</div>
+            <div className="overflow-auto h-[calc(100%-50px)] rounded">
+              {children}
+            </div>
           </div>
         </div>
         <ScrollRestoration />
