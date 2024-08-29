@@ -2,6 +2,7 @@ import { MicroBlog1, MicroBlog2, MicroBlog3 } from "~/components/micro-blog";
 import seemore from "~/assets/blog-3/1.png";
 import { FaMedium } from "react-icons/fa";
 import { Linkedin, Mail, MoveRight } from "lucide-react";
+import { MetaFunction } from "@remix-run/node";
 
 const socials = [
   {
@@ -18,9 +19,13 @@ const socials = [
   },
 ];
 
+export const meta: MetaFunction = () => {
+  return [{ title: "Margaretta | Social Media" }];
+};
+
 export default function Socials() {
   return (
-    <div className="md:mx-5 space-y-3">
+    <div className="space-y-3 md:mx-5">
       <div className="mt-5 space-y-3">
         <p className="text-2xl font-semibold">Youtube</p>
         <div className="mb-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
