@@ -2,6 +2,7 @@ import { LinksFunction } from "@remix-run/node";
 import {
   Links,
   Meta,
+  NavLink,
   Outlet,
   Scripts,
   ScrollRestoration,
@@ -32,26 +33,35 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <div
-          className={"bg-gradient-to-r from-orange-300 to-rose-300 p-5 h-dvh"}
+          className={"h-dvh bg-gradient-to-r from-orange-300 to-rose-300 p-5"}
         >
           <div
             className={
-              "rounded-xl bg-[#f9f9f0] shadow-sm h-[calc(100vh-40px)] p-5"
+              "h-[calc(100vh-40px)] rounded-xl bg-[#F8F7F4] p-5 shadow-sm"
             }
           >
-            <nav className="flex  justify-center w-full">
-              <ul className="flex bg-white gap-x-3 px-6 py-2 rounded-full">
+            <nav className="flex w-full justify-center">
+              <ul className="flex gap-x-3 rounded-full px-6 py-2">
                 {menu.map((e) => (
                   <li
-                    className="font-serif font-light bg-rose-300 text-gray-800 px-3 py-1 cursor-pointer rounded-full"
                     key={e.name}
+                    className="cursor-pointer font-serif font-light"
                   >
-                    {e.name}
+                    <NavLink
+                      to={e.href}
+                      className={({ isActive }) =>
+                        isActive
+                          ? "rounded-full bg-rose-200 px-4 py-2 font-serif font-bold text-gray-800"
+                          : "rounded-full px-4 py-2 font-serif font-light text-gray-800 hover:bg-gray-200"
+                      }
+                    >
+                      {e.name}
+                    </NavLink>
                   </li>
                 ))}
               </ul>
             </nav>
-            <div className="overflow-auto h-[calc(100%-50px)] rounded">
+            <div className="scroll-container h-[calc(100%-50px)] overflow-auto rounded">
               {children}
             </div>
           </div>
