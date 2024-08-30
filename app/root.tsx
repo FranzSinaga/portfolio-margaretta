@@ -2,7 +2,6 @@ import { LinksFunction } from "@remix-run/node";
 import {
   Links,
   Meta,
-  NavLink,
   Outlet,
   Scripts,
   ScrollRestoration,
@@ -16,22 +15,16 @@ import {
   FaHeadphones,
   FaLinkedin,
   FaPenAlt,
+  FaSearch,
   FaUserCircle,
   FaYoutube,
 } from "react-icons/fa";
-import { Fa1, FaHandsClapping } from "react-icons/fa6";
+import { FaBoxArchive, FaFaceGrinWide, FaHandsClapping } from "react-icons/fa6";
 import { BiSolidMessageDetail } from "react-icons/bi";
+import { Menu } from "./components/menu";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: appStylesHref },
-];
-
-const menu = [
-  { name: "Home", href: "/" },
-  { name: "Education", href: "/education" },
-  { name: "Work Experience", href: "/work-experience" },
-  { name: "Projects", href: "/projects" },
-  { name: "Socials", href: "/socials" },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -45,9 +38,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <div
-          className={"h-dvh bg-gradient-to-r from-orange-300 to-rose-300 p-5"}
+          className={
+            "h-dvh bg-gradient-to-r from-orange-300 to-rose-300 p-2 lg:p-5"
+          }
         >
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <div className="absolute left-52 top-10 rotate-12 transform">
               <FaPenAlt size={60} className="text-stone-200" />
             </div>
@@ -73,7 +68,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <FaHandsClapping size={70} className="text-stone-200" />
             </div>
             <div className="absolute bottom-80 right-[300px] -rotate-12 transform">
-              <FaHandsClapping size={70} className="text-stone-200" />
+              <FaSearch size={70} className="text-stone-200" />
+            </div>
+            <div className="absolute bottom-60 left-[300px] rotate-12 transform">
+              <FaBoxArchive size={70} className="text-stone-200" />
+            </div>
+            <div className="absolute right-[600px] top-80 rotate-12 transform">
+              <FaFaceGrinWide size={70} className="text-stone-200" />
             </div>
             <div className="absolute bottom-40 right-10 rotate-12 transform">
               <MdPhoneAndroid size={70} className="text-stone-200" />
@@ -85,32 +86,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <FaHeadphones size={70} className="text-stone-200" />
             </div>
           </div>
-          <div
-            className={
-              "h-[calc(100vh-40px)] rounded-xl bg-[#F8F7F4] p-5 shadow-sm"
-            }
-          >
-            <nav className="hidden w-full justify-center lg:flex">
-              <ul className="flex gap-x-3 rounded-full border-2 px-6 py-3">
-                {menu.map((e) => (
-                  <li
-                    key={e.name}
-                    className="cursor-pointer font-serif font-light"
-                  >
-                    <NavLink
-                      to={e.href}
-                      className={({ isActive }) =>
-                        isActive
-                          ? "rounded-full bg-rose-300 px-4 py-2 font-serif font-bold text-gray-800"
-                          : "rounded-full px-4 py-2 font-serif font-light text-gray-800 hover:bg-gray-200"
-                      }
-                    >
-                      {e.name}
-                    </NavLink>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+          <div className="h-[calc(100vh-20px)] rounded-xl border-2 border-black bg-[#F8F7F4] shadow-sm lg:h-[calc(100vh-40px)] p-3 lg:p-5">
+            <Menu />
             <div className="scroll-container relative h-[calc(100%-50px)] overflow-auto rounded">
               {children}
             </div>
