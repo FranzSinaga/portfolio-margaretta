@@ -86,7 +86,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <FaHeadphones size={70} className="text-stone-200" />
             </div>
           </div>
-          <div className="h-[calc(100vh-20px)] rounded-xl border-2 border-black bg-[#F8F7F4] shadow-sm lg:h-[calc(100vh-40px)] p-3 lg:p-5">
+          <div className="h-[calc(100vh-20px)] rounded-xl border-2 border-black bg-[#F8F7F4] p-3 shadow-sm lg:h-[calc(100vh-40px)] lg:p-5">
             <Menu />
             <div className="scroll-container relative h-[calc(100%-50px)] overflow-auto rounded">
               {children}
@@ -94,7 +94,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
         <ScrollRestoration />
-        <ScreenIndicator />
+        {process.env.NODE_ENV !== "production" && <ScreenIndicator />}
         <Scripts />
       </body>
     </html>
