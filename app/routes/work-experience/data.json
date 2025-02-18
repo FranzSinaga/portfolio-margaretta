@@ -1,10 +1,27 @@
 [
   {
+    "name": "PT. Bank CIMB Niaga Tbk",
+    "position": "Quality Assurance",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7R9Wbs3xkm4Cs7mBhqq33pMdyWbtTFROE4w&s",
+    "place": "Alam Sutera",
+    "periode": "June 2024 - Now",
+    "responsibilities": [
+      "Conduct functional and non-functional testing to ensure software quality.",
+      "Create, document, and execute test cases and scenarios.",
+      "Identify, log, and report bugs using tools such as Taiga and TEMAN.",
+      "Collaborate with the development team to analyze and fix bugs and improve application performance.",
+      "Perform System Integration Testing (SIT).",
+      "Conduct User Acceptance Testing (UAT) with users.",
+      "Perform regression testing after updates to ensure the stability of existing features.",
+      "Provide test result reports and improvement recommendations to relevant teams."
+    ]
+  },
+  {
     "name": "PT. Adira Dinamika Multi Finance",
     "position": "Quality Control",
     "imageUrl": "https://bucket.sdmdigital.id/dts-simonas/simonas/logo/gambar_208.JPG",
     "place": "South Jakarta",
-    "periode": "May 2023 - Now",
+    "periode": "May 2023 - May 2024",
     "responsibilities": [
       "Develop positive and negative test scenarios based on specifications documented in the Business Requirements Document (BRD).",
       "Execute test scenarios and document findings in Bug Reports.",
