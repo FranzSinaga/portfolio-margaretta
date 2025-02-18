@@ -1,7 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
-// import { Player } from "@lottiefiles/react-lottie-player";
+import { Player } from "@lottiefiles/react-lottie-player";
 
-// import lottie from "~/assets/Education.json";
+import lottie from "~/assets/Education.json";
 import PulsatingButton from "~/components/magicui/pulsating-button";
 import BlurFade from "~/components/magicui/blur-fade";
 
@@ -54,7 +54,7 @@ export default function Index() {
         </div>
         <BlurFade delay={1} inView>
           <div className="hidden pb-5 md:block">
-            {/* <Player src={lottie} autoplay loop speed={1} /> */}
+            <Player src={lottie} autoplay loop speed={1} />
           </div>
         </BlurFade>
       </div>
