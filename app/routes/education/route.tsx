@@ -1,6 +1,6 @@
-import { Player } from "@lottiefiles/react-lottie-player";
+// import { Player } from "@lottiefiles/react-lottie-player";
 import type { MetaFunction } from "@remix-run/node";
-import lottie from "~/assets/Homepage.json";
+// import lottie from "~/assets/Homepage.json";
 import BlurFade from "~/components/magicui/blur-fade";
 
 export const meta: MetaFunction = () => {
@@ -27,7 +27,7 @@ export default function Education() {
       <div className="flex max-w-[1100px] items-center gap-x-6">
         <BlurFade delay={0.2} inView>
           <div className="hidden w-[500px] pb-5 md:block">
-            <Player src={lottie} autoplay loop speed={1} />
+            {/* <Player src={lottie} autoplay loop speed={1} /> */}
           </div>
         </BlurFade>
         <BlurFade delay={0.4} inView>
