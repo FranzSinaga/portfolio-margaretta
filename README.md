@@ -1,8 +1,21 @@
-# Welcome to Remix!
+# Web Portfolio
 
-- 📖 [Remix docs](https://remix.run/docs)
+## Stacks
 
-## Development
+- [Remix](https://remix.run/)
+- [Tailwind](https://tailwindcss.com/)
+
+## Getting Started
+
+- Use Node version v20.9.0 (npm v10.1.0)
+
+### Installing
+
+Install package dependencies
+
+```shellscript
+npm install
+```
 
 Run the dev server:
 
@@ -25,15 +38,6 @@ npm start
 ```
 
 Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
 
 ## Styling
 
