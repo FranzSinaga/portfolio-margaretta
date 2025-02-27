@@ -39,7 +39,7 @@ export const DesktopMenu = () => {
               to={e.href}
               className={({ isActive }) =>
                 isActive
-                  ? "rounded-full bg-rose-300 px-2 py-1 font-serif font-bold text-gray-800"
+                  ? "border-b-2 border-black px-2 py-1 font-serif font-bold text-gray-800"
                   : "rounded-full px-2 py-1 font-serif font-light text-gray-800 hover:bg-gray-200"
               }
             >

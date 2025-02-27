@@ -88,7 +88,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
           <div className="h-[calc(100vh-20px)] rounded-xl border-2 border-black bg-[#F8F7F4] p-3 shadow-sm lg:h-[calc(100vh-40px)] lg:p-5">
             <Menu />
-            <div className="scroll-container relative h-[calc(100%-50px)] overflow-auto rounded">
+            <div className="scroll-container scrollbar-thin relative h-[calc(100%-50px)] overflow-auto rounded">
               {children}
             </div>
           </div>
