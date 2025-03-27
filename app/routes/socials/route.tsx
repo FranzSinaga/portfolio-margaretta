@@ -100,7 +100,7 @@ export default function Socials() {
               style={{ transform: "translate(-50%, -50%)" }}
             >
               <a
-                href="https://www.instagram.com/etha040321/"
+                href="https://www.instagram.com/jaditaubareng/"
                 target="_blank"
                 className="flex gap-x-4 whitespace-nowrap rounded-full border-2 border-white bg-gradient-to-r from-fuchsia-600 to-purple-600 p-2 px-12 text-sm font-semibold text-white hover:bg-purple-800"
                 rel="noreferrer"

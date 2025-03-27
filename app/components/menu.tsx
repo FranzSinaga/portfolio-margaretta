@@ -12,8 +12,9 @@ const menu = [
   { name: "Home", href: "/" },
   { name: "Education", href: "/education" },
   { name: "Work Experience", href: "/work-experience" },
+  { name: "Course", href: "/course" },
   { name: "Projects", href: "/projects" },
-  { name: "Socials", href: "/socials" },
+  { name: "Social Media", href: "/socials" },
 ];
 
 export const Menu = () => {

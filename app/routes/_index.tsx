@@ -31,10 +31,10 @@ export default function Index() {
           </BlurFade>
           <BlurFade delay={0.6} inView>
             <p className="mt-2 text-base">
-              I am an experienced professional in Technical Writing, Quality
-              Assurance, and Quality Control, with a strong ability to create
-              clear technical documentation and ensure product excellence
-              through meticulous testing and quality inspection.
+              I am an experienced professional in Technical Writing and Quality
+              Assurance, with a strong ability to create clear technical
+              documentation and ensure product excellence through meticulous
+              testing and quality inspection.
             </p>
           </BlurFade>
           <BlurFade delay={0.8}>
