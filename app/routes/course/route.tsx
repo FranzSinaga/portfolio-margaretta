@@ -1,6 +1,7 @@
 import { MagicCard } from "~/components/magicui/magic-card";
 import pj from "./course.json";
 import BlurFade from "~/components/magicui/blur-fade";
+import { Link2 } from "lucide-react";
 
 export default function Projects() {
   return (
@@ -30,21 +31,21 @@ export default function Projects() {
                   </div>
                 </div>
                 <div className="mt-3 space-y-2 px-4 pb-4">
-                  <p className="leading-tight">{e.description}</p>
+                  <p className="text-sm leading-tight">{e.description}</p>
 
                   {e.links.length > 0 && (
                     <div className="space-y-1">
-                      <p className="font-medium">Results: </p>
-                      <div className="flex w-full flex-wrap gap-2">
+                      <p className="font-medium">Hasil </p>
+                      <div className="flex flex-col flex-wrap gap-2">
                         {e.links.map((e, key) => (
                           <a
-                            className="rounded-full bg-gray-200 px-2 py-0.5 text-xs hover:bg-gray-300"
+                            className="flex items-center gap-x-1 text-xs text-blue-700 hover:underline"
                             href={e.url}
                             key={key}
                             target="_blank"
                             rel="noreferrer"
                           >
-                            {e.name}
+                            {e.name} <Link2 size={13} />
                           </a>
                         ))}
                       </div>

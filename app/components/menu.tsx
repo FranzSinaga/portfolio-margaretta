@@ -14,7 +14,7 @@ const menu = [
   { name: "Pengalaman Kerja", href: "/work-experience" },
   { name: "Kursus", href: "/course" },
   { name: "Proyek", href: "/projects" },
-  { name: "Media Social", href: "/socials" },
+  { name: "Media Sosial", href: "/socials" },
 ];
 
 export const Menu = () => {

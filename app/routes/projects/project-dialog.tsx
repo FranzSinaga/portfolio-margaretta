@@ -30,8 +30,8 @@ export const ProjectDialog = ({ open, setOpen, data }: ProjectDialogProps) => {
               />
               <DialogDescription className="space-y-4 text-gray-800">
                 <div>
-                  <p className="my-3 w-max rounded-full bg-red-300 px-4 py-1 text-base font-bold text-black">
-                    Kontribusi Utama:
+                  <p className="my-3 w-max rounded-full bg-red-300 px-2 py-1 text-base font-bold text-black">
+                    Kontribusi Utama
                   </p>
                   <div className="space-y-2">
                     {data.kontribusi_utama.map((e, key) => (
@@ -43,8 +43,8 @@ export const ProjectDialog = ({ open, setOpen, data }: ProjectDialogProps) => {
                 </div>
 
                 <div>
-                  <p className="my-3 w-max rounded-full bg-red-300 px-4 py-1 text-base font-bold text-black">
-                    Nilai tambah:
+                  <p className="my-3 w-max rounded-full bg-red-300 px-2 py-1 text-base font-bold text-black">
+                    Nilai tambah
                   </p>
                   <div className="space-y-2">
                     {data.nilai_tambah.map((e, key) => (

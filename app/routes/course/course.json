@@ -40,5 +40,18 @@
         "url": "https://docs.google.com/presentation/d/1eY-Vxud03qbqF9d5_KDf2nsegxUBHHUx/edit?usp=drive_link&ouid=114299747387650871482&rtpof=true&sd=true"
       }
     ]
+  },
+  {
+    "title": "AfterOffice Academy",
+    "imageUrl": "https://media.licdn.com/dms/image/v2/D560BAQFmUyE_LaFBjw/company-logo_200_200/company-logo_200_200/0/1728277618083?e=1753315200&v=beta&t=5imwapRnZmY_QOR5I-GKYkuj3Ag8XITbJwEV5ypsgzM",
+    "description": "Saat ini sedang mengikuti program Bootcamp Intensive QA Automation Katalon Studio selama 7 minggu melalui Learning Management System (LMS) Rakamin Academy. Program ini untuk membantu QA Manual beralih ke QA Automation, dengan materi mencakup fundamental automation testing, web & API automation, serta integrasi CI/CD dan reporting.",
+    "types": "Magang Berbasis Proyek",
+    "periode": "April 2025 - sekarang",
+    "links": [
+      {
+        "name": "Github",
+        "url": "https://github.com/Margaretha05/katalon-cura"
+      }
+    ]
   }
 ]

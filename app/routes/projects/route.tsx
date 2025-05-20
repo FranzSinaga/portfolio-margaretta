@@ -39,7 +39,7 @@ const Websites = ({ openDialog, setData }: SectionProps) => {
   return (
     <>
       <h1 className="font-serif text-2xl font-bold">Website</h1>
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
         {website.map((e, key) => (
           <div
             key={key}
@@ -63,7 +63,7 @@ const Mobile = ({ openDialog, setData }: SectionProps) => {
   return (
     <>
       <h1 className="font-serif text-2xl font-bold">Aplikasi Mobile</h1>
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
         {mobile.map((e, key) => (
           <div
             key={key}
