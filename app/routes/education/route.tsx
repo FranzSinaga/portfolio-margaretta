@@ -11,7 +11,7 @@ const education = [
   {
     periode: "September 2016 - September 2020",
     name: "Institut Teknologi Del | Sumatera Utara | GPA 3.07",
-    title: "Sarjana Teknologi Rekayasa Perangkat Lunak",
+    title: "D-IV Teknologi Rekayasa Perangkat Lunak",
   },
   {
     periode: "Tahun 2013 - Tahun 2016",

@@ -22,7 +22,7 @@ export default function Index() {
       <div className="flex max-w-[1100px] items-center gap-x-6">
         <div className="md:max-w-[400px] lg:max-w-[580px]">
           <BlurFade delay={0.2} inView>
-            <p className="font-serif">Hai, Perkenalkan Nama Saya</p>
+            <p className="font-serif">Hai, perkenalkan saya</p>
           </BlurFade>
           <BlurFade delay={0.4} inView>
             <p className="font-serif text-3xl font-extrabold leading-tight md:text-4xl">
@@ -45,9 +45,10 @@ export default function Index() {
               <a
                 href="mailto:margaretharuth5@gmail.com"
                 target="_blank"
+                className="font-serif"
                 rel="noreferrer"
               >
-                Kenali Saya 👋
+                Hubungi Saya 👋
               </a>
             </PulsatingButton>
           </BlurFade>
