@@ -10,14 +10,13 @@ export const meta: MetaFunction = () => {
 const education = [
   {
     periode: "September 2016 - September 2020",
-    name: "Institut Teknologi Del | North Sumatera | GPA 3.07",
-    title:
-      "Bachelor of Applied Science in Software Engineering Technology (B.A.S.S.E.T)",
+    name: "Institut Teknologi Del | Sumatera Utara | GPA 3.07",
+    title: "Sarjana Teknologi Rekayasa Perangkat Lunak",
   },
   {
-    periode: "2013 - 2016",
+    periode: "Tahun 2013 - Tahun 2016",
     name: "SMA Negeri 1 Balige",
-    title: "Science Major",
+    title: "Jurusan IPA",
   },
 ];
 

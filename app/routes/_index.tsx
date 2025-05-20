@@ -22,7 +22,7 @@ export default function Index() {
       <div className="flex max-w-[1100px] items-center gap-x-6">
         <div className="md:max-w-[400px] lg:max-w-[580px]">
           <BlurFade delay={0.2} inView>
-            <p className="font-serif">Hi, My Name is</p>
+            <p className="font-serif">Hai, Perkenalkan Nama Saya</p>
           </BlurFade>
           <BlurFade delay={0.4} inView>
             <p className="font-serif text-3xl font-extrabold leading-tight md:text-4xl">
@@ -31,10 +31,10 @@ export default function Index() {
           </BlurFade>
           <BlurFade delay={0.6} inView>
             <p className="mt-2 text-base">
-              I am an experienced professional in Technical Writing and Quality
-              Assurance, with a strong ability to create clear technical
-              documentation and ensure product excellence through meticulous
-              testing and quality inspection.
+              Saya adalah seorang profesional berpengalaman dalam Penulisan
+              Teknis dan Jaminan Kualitas, dengan kemampuan kuat untuk membuat
+              dokumentasi teknis yang jelas dan memastikan keunggulan produk
+              melalui pengujian dan pemeriksaan kualitas yang cermat.
             </p>
           </BlurFade>
           <BlurFade delay={0.8}>
@@ -47,7 +47,7 @@ export default function Index() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Get To Know Me 👋
+                Kenali Saya 👋
               </a>
             </PulsatingButton>
           </BlurFade>

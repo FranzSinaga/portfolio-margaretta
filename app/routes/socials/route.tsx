@@ -27,7 +27,7 @@ export default function Socials() {
   return (
     <div className="space-y-3 md:mx-5">
       <div className="mt-5 space-y-3">
-        <p className="text-2xl font-semibold">Youtube</p>
+        <p className="font-serif text-2xl font-semibold">Youtube</p>
         <div className="mb-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <iframe
@@ -72,7 +72,7 @@ export default function Socials() {
               className="flex gap-x-4 rounded-full border-2 border-white bg-gradient-to-r from-fuchsia-600 to-purple-600 p-2 px-12 font-semibold text-white hover:bg-purple-800"
               rel="noreferrer"
             >
-              See More <MoveRight />
+              Lainnya <MoveRight />
             </a>
           </div>
           {/* <a
@@ -87,7 +87,7 @@ export default function Socials() {
       </div>
 
       <div className="space-y-3">
-        <p className="text-2xl font-semibold">Instagram</p>
+        <p className="font-serif text-2xl font-semibold">Instagram</p>
         <div className="mb-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
           <MicroBlog1 />
           <MicroBlog2 />
@@ -105,14 +105,14 @@ export default function Socials() {
                 className="flex gap-x-4 whitespace-nowrap rounded-full border-2 border-white bg-gradient-to-r from-fuchsia-600 to-purple-600 p-2 px-12 text-sm font-semibold text-white hover:bg-purple-800"
                 rel="noreferrer"
               >
-                See More <MoveRight />
+                Lainnya <MoveRight />
               </a>
             </div>
           </div>
         </div>
 
         <div className="mt-5 space-y-3">
-          <p className="text-2xl font-semibold">Others</p>
+          <p className="font-serif text-2xl font-semibold">Others</p>
           <div className="mb-10 flex gap-x-3">
             {socials.map((e, key) => (
               <div

@@ -9,12 +9,12 @@ import {
 import { MenuIcon } from "lucide-react";
 
 const menu = [
-  { name: "Home", href: "/" },
-  { name: "Education", href: "/education" },
-  { name: "Work Experience", href: "/work-experience" },
-  { name: "Course", href: "/course" },
-  { name: "Projects", href: "/projects" },
-  { name: "Social Media", href: "/socials" },
+  { name: "Beranda", href: "/" },
+  { name: "Pendidikan", href: "/education" },
+  { name: "Pengalaman Kerja", href: "/work-experience" },
+  { name: "Kursus", href: "/course" },
+  { name: "Proyek", href: "/projects" },
+  { name: "Media Social", href: "/socials" },
 ];
 
 export const Menu = () => {

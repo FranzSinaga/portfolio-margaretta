@@ -2,9 +2,9 @@
   {
     "title": "Kominfo",
     "imageUrl": "https://media.suara.com/pictures/653x366/2023/02/07/65406-logo-digitalent.webp",
-    "description": "The class lasts for 6 weeks and utilizes the Learning Management System (LMS) of Rakamin Academy.",
-    "types": "Course",
-    "periode": "Sept - Oct 2023",
+    "description": "Kelas berlangsung selama 6 minggu dan memanfaatkan Sistem Manajemen Pembelajaran (LMS) Rakamin Academy.",
+    "types": "Kursus Online",
+    "periode": "Sept - Okt 2023",
     "links": [
       {
         "name": "Automation Testing_Cucumber.pdf",
@@ -31,8 +31,8 @@
   {
     "title": "Jubelio",
     "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3rmAl1IvXiJD6h32MgzQ63-WTJvw-hpcKBw&s",
-    "description": "The program runs for 4 weeks and utilizes the Learning Management System (LMS) of Rakamin Academy.",
-    "types": "Project Based Internship",
+    "description": "Program ini berlangsung selama 4 minggu dan memanfaatkan Sistem Manajemen Pembelajaran (LMS) Rakamin Academy.",
+    "types": "Magang Berbasis Proyek",
     "periode": "Batch Oct 2023",
     "links": [
       {
@@ -40,13 +40,5 @@
         "url": "https://docs.google.com/presentation/d/1eY-Vxud03qbqF9d5_KDf2nsegxUBHHUx/edit?usp=drive_link&ouid=114299747387650871482&rtpof=true&sd=true"
       }
     ]
-  },
-  {
-    "title": "Evermos",
-    "imageUrl": "https://glints-dashboard.oss-ap-southeast-1.aliyuncs.com/profile-picture/7d8eb4d7e82567d6eb50e5735f4aed24.png",
-    "description": "The program runs for 4 weeks and utilizes the Learning Management System (LMS) of Rakamin Academy.",
-    "types": "Project Based Internship",
-    "periode": "Batch March 2024",
-    "links": []
   }
 ]

@@ -16,43 +16,46 @@ interface ProjectDialogProps {
 export const ProjectDialog = ({ open, setOpen, data }: ProjectDialogProps) => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="max-w-2xl">
-        <div className="mt-4 max-h-[80dvh] space-y-2 overflow-auto scrollbar-thin">
+      <DialogContent className="max-w-4xl">
+        <DialogTitle className="mb-2 text-2xl font-bold underline">
+          {data && data.project}
+        </DialogTitle>
+        <div className="max-h-[80dvh] space-y-2 overflow-auto scrollbar-thin">
           {data && (
-            <>
+            <div className="mb-8">
               <img
                 src={data.image}
-                alt={data.title}
-                className="aspect-[8/3] w-full rounded object-cover object-top"
+                alt={data.project}
+                className="aspect-[8/3] w-full rounded object-cover object-top drop-shadow-lg"
               />
-              <DialogTitle className="text-2xl font-bold">
-                {data.title}
-              </DialogTitle>
               <DialogDescription className="space-y-4 text-gray-800">
-                <p>{data.description}</p>
                 <div>
-                  <p className="mt-2 text-base font-bold text-black">
-                    Fitur utama mencakup:
+                  <p className="my-3 w-max rounded-full bg-red-300 px-4 py-1 text-base font-bold text-black">
+                    Kontribusi Utama:
                   </p>
                   <div className="space-y-2">
-                    {data.detail.map((e, key) => (
-                      <ul key={key} className="list-disc">
-                        <li>
-                          <span className="font-medium">{e.highlight}: </span>
-                          <br />
-                          {e.description}
-                        </li>
+                    {data.kontribusi_utama.map((e, key) => (
+                      <ul key={key} className="ml-4 list-disc">
+                        <li>{e}</li>
                       </ul>
                     ))}
                   </div>
                 </div>
 
                 <div>
-                  <p className="mt-2 text-base font-bold text-black">Tools:</p>
-                  <p>{data.tech}</p>
+                  <p className="my-3 w-max rounded-full bg-red-300 px-4 py-1 text-base font-bold text-black">
+                    Nilai tambah:
+                  </p>
+                  <div className="space-y-2">
+                    {data.nilai_tambah.map((e, key) => (
+                      <ul key={key} className="ml-4 list-disc">
+                        <li>{e}</li>
+                      </ul>
+                    ))}
+                  </div>
                 </div>
               </DialogDescription>
-            </>
+            </div>
           )}
         </div>
       </DialogContent>
