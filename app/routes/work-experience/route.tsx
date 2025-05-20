@@ -1,13 +1,13 @@
 import { LuBuilding2 } from "react-icons/lu";
 import data from "./data.json";
 import BlurFade from "~/components/magicui/blur-fade";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs";
+import { Calendar, MapPin } from "lucide-react";
 
 export default function WorkExperience() {
-  const defaultValue = data[0].name + "-" + data[0].position;
+  // const defaultValue = data[0].name + "-" + data[0].position;
   return (
-    <div className="m-3 max-w-[1200px] space-y-3 md:mx-auto md:my-10">
-      <Tabs defaultValue={defaultValue}>
+    <div className="m-3 max-w-[1200px] space-y-10 md:mx-auto md:my-10">
+      {/* <Tabs defaultValue={defaultValue}>
         <div className="md:flex">
           <TabsList className="gap-2 rounded-lg border">
             {data.map((e, idx) => (
@@ -67,7 +67,60 @@ export default function WorkExperience() {
             </TabsContent>
           ))}
         </div>
-      </Tabs>
+      </Tabs> */}
+      {data.map((e, idx) => (
+        <BlurFade key={idx} delay={0.25 + idx * 0.05} inView>
+          <div className="relative flex flex-col gap-x-8 rounded-2xl border bg-[#F8F7F4] px-4 py-6 shadow-sm transition-all duration-300 hover:drop-shadow-2xl md:flex-row xl:w-full">
+            <BlurFade inView delay={0.25}>
+              <div className="flex w-[200px] lg:justify-end">
+                {e.imageUrl ? (
+                  <img
+                    src={e.imageUrl}
+                    alt={e.imageUrl}
+                    className="h-20 rounded-md border"
+                  />
+                ) : (
+                  <div className="flex h-20 w-20 items-center justify-center rounded-md border border-black bg-transparent shadow md:col-span-1">
+                    <LuBuilding2 className="text-slate-900" size={30} />
+                  </div>
+                )}
+              </div>
+            </BlurFade>
+            <div className="flex-1">
+              <BlurFade inView delay={0.25}>
+                <p className="font-serif text-xl font-bold">{e.position}</p>
+              </BlurFade>
+              <BlurFade inView delay={0.5}>
+                <p className="text-lg text-orange-400">{e.name}</p>
+              </BlurFade>
+              <ol className="mt-3 xl:w-full">
+                {e.responsibilities.map((e, key) => (
+                  <BlurFade key={idx} delay={0.25 + key * 0.05} inView>
+                    <li key={key} className="ms-5 list-disc md:text-justify">
+                      {e}
+                    </li>
+                  </BlurFade>
+                ))}
+              </ol>
+            </div>
+
+            <div className="w-[200px] place-items-end text-sm italic">
+              <BlurFade inView delay={0.25}>
+                <p className="flex items-center gap-x-1">
+                  <Calendar size={15} />
+                  {e.periode}
+                </p>
+              </BlurFade>
+              <BlurFade inView delay={0.5}>
+                <p className="flex items-center gap-x-1">
+                  <MapPin size={15} />
+                  {e.place}
+                </p>
+              </BlurFade>
+            </div>
+          </div>
+        </BlurFade>
+      ))}
     </div>
   );
 }

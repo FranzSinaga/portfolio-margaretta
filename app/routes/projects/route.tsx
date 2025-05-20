@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import { MagicCard } from "~/components/magicui/magic-card";
 import { website } from "./website";
 import { mobile } from "./mobile";
 
@@ -48,7 +47,7 @@ const Websites = ({ openDialog, setData }: SectionProps) => {
               openDialog(true);
               setData(e);
             }}
-            className="cursor-pointer"
+            className="mb-5 w-full cursor-pointer rounded-lg border bg-[#F8F7F4] shadow-md transition-all duration-300 hover:drop-shadow-xl"
           >
             <BlurFade delay={0.25 + key * 0.1} inView>
               <ProjectCard
@@ -76,7 +75,7 @@ const Mobile = ({ openDialog, setData }: SectionProps) => {
               openDialog(true);
               setData(e);
             }}
-            className="cursor-pointer"
+            className="mb-5 w-full cursor-pointer rounded-lg border bg-[#F8F7F4] shadow-md transition-all duration-300 hover:drop-shadow-xl"
           >
             <BlurFade delay={0.25 + key * 0.1} inView>
               <ProjectCard
@@ -102,10 +101,8 @@ type CardType = {
 
 const ProjectCard = ({ title, image, description, isMobile }: CardType) => {
   return (
-    <MagicCard
-      gradientColor="#fff7ed"
-      className="mb-3 w-full rounded-lg border bg-[#F8F7F4] shadow-md hover:shadow-sm"
-    >
+    // <MagicCard gradientColor="#fff7ed" className="mb-3">
+    <>
       <div className="gap-x-5 rounded-t-lg px-4 pt-4">
         <img
           src={image}
@@ -115,13 +112,12 @@ const ProjectCard = ({ title, image, description, isMobile }: CardType) => {
             isMobile ? "" : "aspect-video",
           )}
         />
-        <div>
-          <p className="text-lg font-bold">{title}</p>
-        </div>
+        <p className="text-lg font-bold">{title}</p>
       </div>
       <div className="mt-3 space-y-2 px-4 pb-4">
         <p className="text-sm leading-tight">{description}</p>
       </div>
-    </MagicCard>
+    </>
+    // </MagicCard>
   );
 };

@@ -25,7 +25,7 @@ export default function Index() {
             <p className="font-serif">Hi, My Name is</p>
           </BlurFade>
           <BlurFade delay={0.4} inView>
-            <p className="font-serif text-5xl font-extrabold leading-tight">
+            <p className="font-serif text-3xl font-extrabold leading-tight md:text-4xl">
               Margaretta Ruth Verawati Simanjuntak
             </p>
           </BlurFade>
@@ -53,7 +53,7 @@ export default function Index() {
           </BlurFade>
         </div>
         <BlurFade delay={1} inView>
-          <div className="hidden pb-5 md:block">
+          <div className="hidden w-[30dvw] pb-5 md:block">
             <Player src={lottie} autoplay loop speed={1} />
           </div>
         </BlurFade>

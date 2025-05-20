@@ -26,7 +26,7 @@ export default function Education() {
     <div className="flex h-full items-center justify-center">
       <div className="flex max-w-[1100px] items-center gap-x-6">
         <BlurFade delay={0.2} inView>
-          <div className="hidden w-[500px] pb-5 md:block">
+          <div className="hidden w-[30dvw] pb-5 md:block">
             <Player src={lottie} autoplay loop speed={1} />
           </div>
         </BlurFade>

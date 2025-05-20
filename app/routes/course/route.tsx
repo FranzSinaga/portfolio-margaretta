@@ -6,13 +6,13 @@ export default function Projects() {
   return (
     <div className="mx-5 mt-4">
       <div className="mx-auto max-w-[1200px] space-y-3">
-        <h1 className="text-2xl font-bold">Course</h1>
+        <h1 className="font-serif text-2xl font-bold">Course</h1>
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {pj.map((e, key) => (
             <BlurFade key={key} delay={0.25 + key * 0.1} inView>
               <MagicCard
                 gradientColor="#fff7ed"
-                className="mb-3 w-full rounded-lg border bg-[#F8F7F4] shadow-md hover:shadow-sm"
+                className="mb-3 w-full rounded-lg border bg-[#F8F7F4] shadow-md transition-all duration-300 hover:drop-shadow-xl"
               >
                 <div className="gap-x-5 rounded-t-lg px-4 pt-4 lg:flex lg:flex-row lg:items-center">
                   <img
