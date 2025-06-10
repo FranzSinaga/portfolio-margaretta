@@ -12,7 +12,7 @@ const menu = [
   { name: "Beranda", href: "/" },
   { name: "Pendidikan", href: "/education" },
   { name: "Pengalaman Kerja", href: "/work-experience" },
-  { name: "Kursus", href: "/course" },
+  { name: "Kursus dan Eksplorasi", href: "/course" },
   { name: "Proyek", href: "/projects" },
   { name: "Media Sosial", href: "/socials" },
 ];
