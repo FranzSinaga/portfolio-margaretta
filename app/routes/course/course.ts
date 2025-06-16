@@ -1,5 +1,6 @@
 import swag from "~/assets/course-exploration/swag.png";
 import orange from "~/assets/course-exploration/orange.png";
+import demo_qa from "~/assets/course-exploration/demo-qa.png";
 
 export const course = [
   {
@@ -12,8 +13,12 @@ export const course = [
     periode: "April 2025 - Sekarang",
     links: [
       {
-        name: "Github",
+        name: "Tugas 1 - Katalon Cura",
         url: "https://github.com/Margaretha05/katalon-cura",
+      },
+      {
+        name: "Tugas Akhir - Katalon Project",
+        url: "https://github.com/Margaretha05/katalon-demo-qa",
       },
     ],
   },
@@ -27,7 +32,7 @@ export const course = [
     periode: "September - Oktober 2023",
     links: [
       {
-        name: "Automation Testing_Cucumber.pdf",
+        name: "Automation Testing Cucumber.pdf",
         url: "https://drive.google.com/file/d/1nsxElw1ssr_Q0slEMaTb75sZY8cjPJON/view?usp=sharing",
       },
       {
@@ -58,7 +63,7 @@ export const course = [
     periode: "Batch Oktober 2023",
     links: [
       {
-        name: "FinalTask_Jubelio_QA",
+        name: "FinalTask Jubelio QA",
         url: "https://docs.google.com/presentation/d/1eY-Vxud03qbqF9d5_KDf2nsegxUBHHUx/edit?usp=drive_link&ouid=114299747387650871482&rtpof=true&sd=true",
       },
     ],
@@ -98,6 +103,26 @@ export const course = [
     types: "Eksplorasi",
     periode: "",
     redirect: "https://opensource-demo.orangehrmlive.com/",
-    links: [],
+    links: [
+      {
+        name: "Automation Script (Github)",
+        url: "https://github.com/Margaretha05/TestingOrangeHRM",
+      },
+    ],
+  },
+  {
+    title: "Tugas Akhir Project Katalon",
+    imageUrl: demo_qa,
+    description:
+      "Project ini menggunakan situs Demo QA sebagai studi kasus untuk end-to-end testing, termasuk automation testing menggunakan Katalon, penulisan test case & bug report.",
+    types: "Eksplorasi",
+    periode: "",
+    redirect: "https://demoqa.com/",
+    links: [
+      {
+        name: "Automation Script (Github)",
+        url: "https://github.com/Margaretha05/katalon-demo-qa",
+      },
+    ],
   },
 ];

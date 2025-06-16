@@ -24,7 +24,9 @@ export default function Projects() {
                       alt={e.imageUrl}
                       className="aspect-video w-auto rounded-lg border-2 bg-cover object-cover object-top shadow-md"
                     />
-                    <p className="mt-3 text-lg font-bold">{e.title}</p>
+                    <p className="mt-3 font-serif text-xl font-bold">
+                      {e.title}
+                    </p>
                   </a>
                   <p className="text-sm leading-tight">{e.description}</p>
 
@@ -34,7 +36,7 @@ export default function Projects() {
                       <div className="flex flex-col flex-wrap gap-2">
                         {e.links.map((e, key) => (
                           <a
-                            className="flex items-center gap-x-1 text-xs text-blue-700 hover:underline"
+                            className="flex items-center gap-x-1 font-mono text-xs text-blue-700 hover:underline"
                             href={e.url}
                             key={key}
                             target="_blank"
@@ -67,7 +69,7 @@ export default function Projects() {
                     className="h-14 w-auto rounded-lg bg-cover object-cover"
                   />
                   <div>
-                    <p className="text-xl font-bold">{e.title}</p>
+                    <p className="font-serif text-xl font-bold">{e.title}</p>
                     <p className="text-xs font-normal leading-tight text-gray-700">
                       {e.types}
                       <br />
@@ -84,7 +86,7 @@ export default function Projects() {
                       <div className="flex flex-col flex-wrap gap-2">
                         {e.links.map((e, key) => (
                           <a
-                            className="flex items-center gap-x-1 text-xs text-blue-700 hover:underline"
+                            className="flex items-center gap-x-1 font-mono text-xs text-blue-700 hover:underline"
                             href={e.url}
                             key={key}
                             target="_blank"
