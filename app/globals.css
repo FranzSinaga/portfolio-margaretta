@@ -66,6 +66,24 @@
   body {
     @apply overflow-hidden bg-background text-foreground;
   }
+  h1 {
+    @apply text-4xl font-bold md:text-6xl;
+  }
+  h2 {
+    @apply text-2xl font-bold md:text-4xl;
+  }
+  h3 {
+    @apply text-xl font-bold md:text-2xl;
+  }
+  h4 {
+    @apply text-lg font-bold md:text-xl;
+  }
+  p {
+    @apply text-base;
+  }
+  a {
+    @apply cursor-pointer text-sm;
+  }
 }
 
 /* .scroll-container::-webkit-scrollbar {

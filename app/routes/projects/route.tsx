@@ -1,18 +1,29 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import { website } from "./website";
-import { mobile } from "./mobile";
+// import { website } from "./website";
+// import { mobile } from "./mobile";
 
 import BlurFade from "~/components/magicui/blur-fade";
 import { cn } from "~/lib/utils";
 import { useState } from "react";
 import { ProjectDialog } from "./project-dialog";
+import { CMS_API_BASE_URL } from "~/lib/const";
+import { json } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
+import { EttaProject } from "./projects.type";
 
-type DetailType = (typeof website)[0];
+export async function loader() {
+  const res = await fetch(
+    `${CMS_API_BASE_URL}/api/etta-projects?depth=1&where[active][equals]=true&limit=100`,
+  );
+  const projects = await res.json();
+  return json(projects.docs);
+}
 
 export default function Projects() {
   const [open, setOpen] = useState<boolean>(false);
-  const [data, setData] = useState<DetailType | null>(null);
+  const [data, setData] = useState<EttaProject | null>(null);
+
   return (
     <div className="mx-5 mt-4">
       <ProjectDialog data={data} open={open} setOpen={(e) => setOpen(e)} />
@@ -32,59 +43,65 @@ export default function Projects() {
 
 type SectionProps = {
   openDialog: (e: boolean) => void;
-  setData: (data: DetailType) => void;
+  setData: (data: EttaProject) => void;
 };
 
 const Websites = ({ openDialog, setData }: SectionProps) => {
-  return (
-    <>
-      <h1 className="font-serif text-2xl font-bold">Website</h1>
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-        {website.map((e, key) => (
-          <div
-            key={key}
-            onClick={() => {
-              openDialog(true);
-              setData(e);
-            }}
-            className="mb-5 w-full cursor-pointer rounded-lg border bg-[#F8F7F4] shadow-md transition-all duration-300 hover:drop-shadow-xl"
-          >
-            <BlurFade delay={0.25 + key * 0.1} inView>
-              <ProjectCard data={e} />
-            </BlurFade>
-          </div>
-        ))}
-      </div>
-    </>
-  );
+  const projects = useLoaderData<EttaProject[]>();
+  const web = projects.filter((e) => e.projectType === "Website");
+  if (web.length > 0)
+    return (
+      <>
+        <h1 className="font-serif text-2xl font-bold">Website</h1>
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+          {web.map((e, key) => (
+            <div
+              key={key}
+              onClick={() => {
+                openDialog(true);
+                setData(e);
+              }}
+              className="mb-5 w-full cursor-pointer rounded-lg border bg-[#F8F7F4] shadow-md transition-all duration-300 hover:drop-shadow-xl"
+            >
+              <BlurFade delay={0.25 + key * 0.1} inView>
+                <ProjectCard data={e} />
+              </BlurFade>
+            </div>
+          ))}
+        </div>
+      </>
+    );
 };
 
 const Mobile = ({ openDialog, setData }: SectionProps) => {
-  return (
-    <>
-      <h1 className="font-serif text-2xl font-bold">Aplikasi Mobile</h1>
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-        {mobile.map((e, key) => (
-          <div
-            key={key}
-            onClick={() => {
-              openDialog(true);
-              setData(e);
-            }}
-            className="mb-5 w-full cursor-pointer rounded-lg border bg-[#F8F7F4] shadow-md transition-all duration-300 hover:drop-shadow-xl"
-          >
-            <BlurFade delay={0.25 + key * 0.1} inView>
-              <ProjectCard data={e} />
-            </BlurFade>
-          </div>
-        ))}
-      </div>
-    </>
-  );
+  const projects = useLoaderData<EttaProject[]>();
+  const mob = projects.filter((e) => e.projectType === "Mobile");
+  if (mob.length > 0)
+    return (
+      <>
+        <h1 className="font-serif text-2xl font-bold">Aplikasi Mobile</h1>
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+          {mob.map((e, key) => (
+            <div
+              key={key}
+              onClick={() => {
+                openDialog(true);
+                setData(e);
+              }}
+              className="mb-5 w-full cursor-pointer rounded-lg border bg-[#F8F7F4] shadow-md transition-all duration-300 hover:drop-shadow-xl"
+            >
+              <BlurFade delay={0.25 + key * 0.1} inView>
+                <ProjectCard data={e} />
+              </BlurFade>
+            </div>
+          ))}
+        </div>
+      </>
+    );
 };
 
 type CardType = {
-  data: (typeof website)[0];
+  data: EttaProject;
   isMobile?: boolean;
 };
 
@@ -94,28 +111,29 @@ const ProjectCard = ({ data, isMobile }: CardType) => {
     <>
       <div className="gap-x-5 rounded-t-lg px-4 pt-4">
         <img
-          src={data.image}
-          alt={data.project}
+          src={`${CMS_API_BASE_URL}${data.image?.url}`}
+          alt={String(data.image?.alt)}
           className={cn(
             "mb-2 rounded object-cover object-top",
             isMobile ? "" : "aspect-video",
           )}
         />
-        <p className="text-lg font-bold">{data.project}</p>
+        <p className="text-lg font-bold">{data.projectName}</p>
       </div>
       <div className="space-y-2 px-4 pb-4">
         <p className="text-sm">
           <span className="font-bold">Role:</span> {data.role}
         </p>
         <div className="flex flex-wrap gap-x-2 gap-y-1">
-          {data.tools.map((e, key) => (
-            <span
-              key={key}
-              className="flex items-center rounded-full border border-gray-700 bg-blue-300 px-2 py-0.5 text-xs shadow-sm"
-            >
-              {e}
-            </span>
-          ))}
+          {data.tags &&
+            data.tags.map((e, key) => (
+              <span
+                key={key}
+                className="flex items-center rounded-full border border-gray-700 bg-blue-300 px-2 py-0.5 text-xs shadow-sm"
+              >
+                {e}
+              </span>
+            ))}
         </div>
       </div>
       <div className="space-y-2 px-4 pb-4">
