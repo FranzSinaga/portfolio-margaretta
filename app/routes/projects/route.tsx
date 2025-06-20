@@ -63,7 +63,7 @@ export default function Projects() {
           setData={(data) => setData(data)}
         />
         <Mobile
-          data={project.filter((e) => e.projectType === "Website")}
+          data={project.filter((e) => e.projectType === "Mobile")}
           openDialog={(e) => setOpen(e)}
           setData={(data) => setData(data)}
         />
