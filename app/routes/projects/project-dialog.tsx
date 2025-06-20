@@ -1,4 +1,3 @@
-// import { MagicCard } from "~/components/magicui/magic-card";
 import {
   Dialog,
   DialogContent,
@@ -8,7 +7,6 @@ import {
 import { EttaProject } from "./projects.type";
 import { CMS_API_BASE_URL } from "~/lib/const";
 import { RichTextUI } from "~/components/RichTextUI";
-// import { website } from "./website";
 
 interface ProjectDialogProps {
   open: boolean;
@@ -33,31 +31,6 @@ export const ProjectDialog = ({ open, setOpen, data }: ProjectDialogProps) => {
               />
               <DialogDescription className="space-y-4 text-gray-800">
                 <RichTextUI data={data.detail!} />
-                {/* <div>
-                  <p className="my-3 w-max rounded-full bg-red-300 px-2 py-1 text-base font-bold text-black">
-                    Kontribusi Utama
-                  </p>
-                  <div className="space-y-2">
-                    {data.kontribusi_utama.map((e, key) => (
-                      <ul key={key} className="ml-4 list-disc">
-                        <li>{e}</li>
-                      </ul>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <p className="my-3 w-max rounded-full bg-red-300 px-2 py-1 text-base font-bold text-black">
-                    Nilai tambah
-                  </p>
-                  <div className="space-y-2">
-                    {data.nilai_tambah.map((e, key) => (
-                      <ul key={key} className="ml-4 list-disc">
-                        <li>{e}</li>
-                      </ul>
-                    ))}
-                  </div>
-                </div> */}
               </DialogDescription>
             </div>
           )}

@@ -1,1 +1,1 @@
-export const CMS_API_BASE_URL = "http://cms.franzsinaga.com";
+export const CMS_API_BASE_URL = "https://cms.franzsinaga.com";

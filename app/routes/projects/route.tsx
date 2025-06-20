@@ -1,38 +1,69 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-// import { website } from "./website";
-// import { mobile } from "./mobile";
 
 import BlurFade from "~/components/magicui/blur-fade";
 import { cn } from "~/lib/utils";
 import { useState } from "react";
 import { ProjectDialog } from "./project-dialog";
 import { CMS_API_BASE_URL } from "~/lib/const";
-import { json } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
 import { EttaProject } from "./projects.type";
-
-export async function loader() {
-  const res = await fetch(
-    `${CMS_API_BASE_URL}/api/etta-projects?depth=1&where[active][equals]=true&limit=100`,
-  );
-  const projects = await res.json();
-  return json(projects.docs);
-}
+import { fetcher } from "~/lib/fetcher";
+import { Info } from "lucide-react";
+import { Button } from "~/components/ui/button";
+import useSWR from "swr";
 
 export default function Projects() {
+  const {
+    data: projects,
+    isLoading,
+    error,
+    mutate,
+    isValidating,
+  } = useSWR<{ docs: EttaProject[] }>(
+    `${CMS_API_BASE_URL}/api/etta-projects?depth=1&where[active][equals]=true&limit=100`,
+    fetcher,
+    {
+      revalidateIfStale: false,
+      revalidateOnFocus: false,
+      revalidateOnReconnect: false,
+    },
+  );
+
+  const project = projects?.docs;
+
   const [open, setOpen] = useState<boolean>(false);
   const [data, setData] = useState<EttaProject | null>(null);
+
+  if (isLoading || isValidating)
+    return (
+      <div className="py-18 flex w-full items-center justify-center">
+        <p>Loading...</p>
+      </div>
+    );
+  if (error || !project)
+    return (
+      <div className="flex justify-between rounded-sm bg-accent p-2 drop-shadow-sm">
+        <div className="flex items-center gap-x-2">
+          <Info size={18} />
+          <p className="font-mono">Something wrong unexpected</p>
+        </div>
+        <Button variant={"default"} size={"sm"} onClick={() => mutate()}>
+          Reload
+        </Button>
+      </div>
+    );
 
   return (
     <div className="mx-5 mt-4">
       <ProjectDialog data={data} open={open} setOpen={(e) => setOpen(e)} />
       <div className="mx-auto max-w-[1200px] space-y-3">
         <Websites
+          data={project.filter((e) => e.projectType === "Website")}
           openDialog={(e) => setOpen(e)}
           setData={(data) => setData(data)}
         />
         <Mobile
+          data={project.filter((e) => e.projectType === "Website")}
           openDialog={(e) => setOpen(e)}
           setData={(data) => setData(data)}
         />
@@ -42,13 +73,13 @@ export default function Projects() {
 }
 
 type SectionProps = {
+  data: EttaProject[];
   openDialog: (e: boolean) => void;
   setData: (data: EttaProject) => void;
 };
 
-const Websites = ({ openDialog, setData }: SectionProps) => {
-  const projects = useLoaderData<EttaProject[]>();
-  const web = projects.filter((e) => e.projectType === "Website");
+const Websites = ({ data, openDialog, setData }: SectionProps) => {
+  const web = data.filter((e) => e.projectType === "Website");
   if (web.length > 0)
     return (
       <>
@@ -73,15 +104,13 @@ const Websites = ({ openDialog, setData }: SectionProps) => {
     );
 };
 
-const Mobile = ({ openDialog, setData }: SectionProps) => {
-  const projects = useLoaderData<EttaProject[]>();
-  const mob = projects.filter((e) => e.projectType === "Mobile");
-  if (mob.length > 0)
+const Mobile = ({ data, openDialog, setData }: SectionProps) => {
+  if (data.length > 0)
     return (
       <>
         <h1 className="font-serif text-2xl font-bold">Aplikasi Mobile</h1>
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-          {mob.map((e, key) => (
+          {data.map((e, key) => (
             <div
               key={key}
               onClick={() => {
